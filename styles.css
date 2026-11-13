@@ -230,7 +230,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .hero { padding: clamp(2.25rem, 5vw, 4rem) 0 clamp(1.5rem, 3vw, 2.5rem); }
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr);
   gap: clamp(2rem, 5vw, 4.5rem);
   align-items: center;
 }
@@ -818,3 +818,7 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 .study-list li:last-child { border-bottom: 1px solid var(--line); }
 .study-list a, .further a { color: var(--ink); font-weight: 700; text-underline-offset: 0.2em; }
 .about-text p.further { font-size: 1rem; line-height: 1.7; color: var(--muted); }
+
+/* Hero: keep the top label on one line on wide screens; byline sits under the photo */
+.hero .eyebrow { letter-spacing: 0.12em; }
+.hero-side .byline { margin: 1.75rem 0 0; }
