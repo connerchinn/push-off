@@ -14,7 +14,8 @@
 <body>
 <!--
   PUSH OFF
-  Files: index.html (this page), styles.css (colors, fonts, layout), hero-walking.jpg (top photo).
+  Files: index.html (this page), styles.css (colors, fonts, layout), afo-wearing.jpg and afo-fitting.jpg (top photos),
+  exosuit-study.jpg (Step 3 photo).
   To change text on GitHub: open this file, click the pencil icon, edit, then "Commit changes".
   Colors and fonts are the variables at the top of styles.css.
 -->
@@ -45,8 +46,11 @@
         </div>
         <div class="hero-side">
           <figure class="hero-figure">
-            <img src="hero-walking.jpg" width="765" height="573" alt="Black-and-white photo of a person walking down a clinic hallway wearing a plastic ankle brace">
-            <figcaption>The standard ankle-foot brace. Illustrative image created with AI based on the standard prescription rigid Ankle-Foot Orthosis (AFO).</figcaption>
+            <div class="hero-pair">
+              <img src="afo-wearing.jpg" width="1200" height="800" alt="A person’s lower legs in white sneakers, with a blue plastic ankle-foot brace strapped to one calf">
+              <img src="afo-fitting.jpg" width="1200" height="800" alt="A clinician kneels to help a seated person put a sneaker on over a blue plastic ankle-foot brace">
+            </div>
+            <figcaption>Left: an ankle-foot orthosis (AFO) worn with an everyday sneaker. Right: a clinician helps fit an AFO and shoe. Photos by Tom Claes on Unsplash.</figcaption>
           </figure>
           <div class="byline">
             <p class="byline-name">By Conner Chinn</p>
@@ -185,21 +189,43 @@
           </div>
           <figcaption class="fig-caption">Simplified drawing based on the cable-driven exosuit tested with stroke survivors.</figcaption>
         </figure>
-        <figure class="card" style="margin:0">
-          <p class="eyebrow">Energy it takes to walk</p>
-          <p class="energy-sub">Stroke survivors, before vs. with help · starting point set to 100</p>
-          <p class="energy-big">−10<small>%</small></p>
-          <div class="bar-row">
-            <div class="bar-label"><strong>Walking without exosuit help</strong><span>100</span></div>
-            <div class="bar" role="img" aria-label="100 out of 100"><i style="width:100%"></i></div>
-          </div>
-          <div class="bar-row">
-            <div class="bar-label"><strong>Walking with the soft exosuit</strong><span>90</span></div>
-            <div class="bar with" role="img" aria-label="90 out of 100"><i style="width:90%"></i></div>
-          </div>
-          <figcaption class="fig-caption">Less energy per step means walking is less tiring. Data: <a class="cite" href="https://doi.org/10.1126/scitranslmed.aai9084" target="_blank" rel="noopener">(Harvard &amp; Boston University study, 2017)</a></figcaption>
+        <figure class="card photo-card" style="margin:0">
+          <p class="eyebrow">The exosuit from the study</p>
+          <img src="exosuit-study.jpg" width="588" height="474" alt="Front and side views of a person wearing a black soft exosuit on one leg: a waist belt, cables running down the leg, a calf wrap, and a sensor on the shoe.">
+          <figcaption class="fig-caption">The exosuit tested with stroke survivors, worn on one leg. “PF actuation” helps the foot push off, and “DF actuation” helps lift the toes. Figure 1A from Awad et al., <em>Science Translational Medicine</em>, 2017. <a class="cite" href="https://doi.org/10.1126/scitranslmed.aai9084" target="_blank" rel="noopener">(Harvard &amp; Boston University study, 2017)</a></figcaption>
         </figure>
       </div>
+      <figure class="step-figure card results results-wide">
+        <p class="eyebrow">What changed with the exosuit</p>
+        <p class="energy-sub">Stroke survivors walking with the suit’s help vs. without it. Without help is set to 100.</p>
+        <div class="results-grid">
+            <div class="result">
+              <div class="result-head">
+                <div><p class="result-name">Push-off from the weaker leg</p><p class="result-hint">Higher is better</p></div>
+                <p class="result-delta">+11%</p>
+              </div>
+              <div class="rbar-row"><span class="rbar-label">Without help</span><span class="rbar" role="img" aria-label="Without help: 100"><i style="width:83.3%"></i></span><span class="rbar-val">100</span></div>
+              <div class="rbar-row with"><span class="rbar-label">With help</span><span class="rbar" role="img" aria-label="With help: 111"><i style="width:92.5%"></i></span><span class="rbar-val">111</span></div>
+            </div>
+            <div class="result">
+              <div class="result-head">
+                <div><p class="result-name">Imbalance between the two legs’ push-off</p><p class="result-hint">Lower is better</p></div>
+                <p class="result-delta">−20%</p>
+              </div>
+              <div class="rbar-row"><span class="rbar-label">Without help</span><span class="rbar" role="img" aria-label="Without help: 100"><i style="width:83.3%"></i></span><span class="rbar-val">100</span></div>
+              <div class="rbar-row with"><span class="rbar-label">With help</span><span class="rbar" role="img" aria-label="With help: 80"><i style="width:66.7%"></i></span><span class="rbar-val">80</span></div>
+            </div>
+            <div class="result">
+              <div class="result-head">
+                <div><p class="result-name">Energy it takes to walk</p><p class="result-hint">Lower is better</p></div>
+                <p class="result-delta">−10%</p>
+              </div>
+              <div class="rbar-row"><span class="rbar-label">Without help</span><span class="rbar" role="img" aria-label="Without help: 100"><i style="width:83.3%"></i></span><span class="rbar-val">100</span></div>
+              <div class="rbar-row with"><span class="rbar-label">With help</span><span class="rbar" role="img" aria-label="With help: 90"><i style="width:75.0%"></i></span><span class="rbar-val">90</span></div>
+            </div>
+        </div>
+        <figcaption class="fig-caption">Results from short test sessions with a small group of stroke survivors. Data: <a class="cite" href="https://doi.org/10.1126/scitranslmed.aai9084" target="_blank" rel="noopener">(Harvard &amp; Boston University study, 2017)</a></figcaption>
+      </figure>
     </section>
 
     <!-- ===================== STEP 4 ===================== -->
@@ -237,26 +263,6 @@
           </div>
         </div>
 
-        <figure class="card where" style="margin-left:0;margin-right:0">
-          <p class="eyebrow">Where each device is today</p>
-          <div class="where-scroll">
-            <div class="where-map" role="img" aria-label="Soft exosuits are mostly found in research labs and specialized clinics. The rigid brace is the everyday prescription. The space between them is the gap.">
-              <div class="where-soft"></div>
-              <span class="where-soft-label">Soft exosuit</span>
-              <div class="where-gap"></div>
-              <span class="where-gap-label">THE GAP</span>
-              <span class="where-rigid">Rigid brace</span>
-              <div class="where-track"></div>
-              <span class="where-node" style="left:16.666%"></span>
-              <span class="where-node" style="left:50%"></span>
-              <span class="where-node" style="left:83.333%"></span>
-              <span class="where-place" style="left:16.666%">Research lab</span>
-              <span class="where-place" style="left:50%">Specialized clinics</span>
-              <span class="where-place" style="left:83.333%">Everyday prescription</span>
-            </div>
-          </div>
-          <figcaption class="fig-caption">Simplified picture of where each device is mainly used, based on the research behind this guide.</figcaption>
-        </figure>
       </div>
     </section>
 
@@ -293,7 +299,7 @@
         </div>
         <aside class="ai-note" aria-labelledby="h-ai">
           <p class="eyebrow rust" id="h-ai">How AI was used</p>
-          <p>This website was built as a single standalone page with help from Claude (Opus 5.5 Extra), an AI tool. With guidance from me, AI produced the page layout, the diagrams and charts. I revised/adapted the writing from my research paper for this webpage, checked the facts against the original studies, and made the final design decisions. The photo at the top of the guide was generated with AI and does not show a real patient.</p>
+          <p>This website was built as a single standalone page with help from Claude (Opus 5.5 Extra), an AI tool. With guidance from me, AI produced the page layout, the diagrams and charts. I revised/adapted the writing from my research paper for this webpage, checked the facts against the original studies, and made the final design decisions. The photos at the top of the guide are by Tom Claes on Unsplash, and the exosuit photo in Step 3 is from the Harvard and Boston University study.</p>
         </aside>
       </div>
     </section>
@@ -381,6 +387,17 @@
   printBtn.addEventListener('click', function () {
     try { window.print(); } catch (e) { /* printing unavailable */ }
   });
+})();
+</script>
+<script>
+/* Always open at the top of the page, even if the link ends in a section name like #push-off */
+(function () {
+  if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+  if (!location.hash) return;
+  history.replaceState(null, '', location.pathname + location.search);
+  function top() { window.scrollTo({ top: 0, left: 0, behavior: 'instant' }); }
+  top();
+  window.addEventListener('load', top);
 })();
 </script>
 </body>

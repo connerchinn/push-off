@@ -822,3 +822,68 @@ a:focus-visible, button:focus-visible, [tabindex]:focus-visible {
 /* Hero: keep the top label on one line on wide screens; byline sits under the photo */
 .hero .eyebrow { letter-spacing: 0.12em; }
 .hero-side .byline { margin: 1.75rem 0 0; }
+
+/* Hero: two photos side by side */
+.hero-pair { display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; }
+.hero-figure .hero-pair img { aspect-ratio: 4 / 5; object-fit: cover; }
+.hero-pair img:first-child { object-position: 57% 50%; }
+.hero-pair img:last-child { object-position: 52% 50%; }
+
+/* Step 3: results chart */
+.result { padding: 1.1rem 0 0.9rem; border-top: 1px solid var(--line); }
+.result:first-of-type { margin-top: 1.4rem; }
+.result-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+.result-name { margin: 0; font-weight: 800; color: var(--ink); line-height: 1.35; }
+.result-hint { margin: 0.15rem 0 0; font-size: 0.85rem; color: var(--muted); }
+.result-delta {
+  margin: 0;
+  font-family: var(--font-serif);
+  color: var(--rust);
+  font-size: 2.1rem;
+  line-height: 1;
+  white-space: nowrap;
+}
+.rbar-row {
+  display: grid;
+  grid-template-columns: 6.2rem minmax(0, 1fr) 2.2rem;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+  font-size: 0.88rem;
+  color: var(--muted);
+}
+.rbar { display: block; height: 0.9rem; background: var(--card-head); border-radius: 2px; overflow: hidden; }
+.rbar i { display: block; height: 100%; background: var(--bar-gray); }
+.rbar-row.with .rbar i { background: var(--rust); }
+.rbar-row.with .rbar-label, .rbar-row.with .rbar-val { color: var(--ink); font-weight: 700; }
+.rbar-val { text-align: right; }
+
+/* Step 3: photo from the study */
+.photo-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  background: #fff;
+  margin-top: 0.5rem;
+}
+
+/* Step 3: results chart, full width under the two cards */
+.results-wide { padding: clamp(1.5rem, 3.5vw, 2.5rem); margin-top: 1.5rem; }
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 0 2rem;
+}
+.results-grid .result:first-of-type { margin-top: 1.4rem; }
+.results-grid .result { margin-top: 1.4rem; }
+@media (max-width: 58rem) {
+  .results-grid { grid-template-columns: 1fr; }
+  .results-grid .result { margin-top: 0; }
+  .results-grid .result:first-of-type { margin-top: 1.4rem; }
+}
